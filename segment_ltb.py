@@ -158,22 +158,3 @@ def get_segmentation(path, part=6, display=True):
         plt.show()
         
     return lung_mask, bone_mask, tissue_mask
-
-done = r'C:\Users\william\PixelCNN\PixelCNN-Interpolation\sample\Rider\done'
-files = os.listdir(done)
-
-#keys = list(orig_list.keys())
-#path = orig_list[keys[0]]
-
-path = r'H:\Data\RIDER Lung CT\RIDER-1129164940\09-20-2006-1-96508\8.000000-08100'
-
-path = 'path to dicom files'
-lung_mask, bone_mask, tissue_mask = get_segmentation(path, part = 6, display = True)
-
-name = keys[0]+'_lung_mask'
-np.save(os.path.join(done, name), lung_mask)
-name = keys[0]+'_bone_mask'
-np.save(os.path.join(done, name), lung_mask)
-name = keys[0]+'_tissue_mask'
-np.save(os.path.join(done, name), lung_mask)
-
